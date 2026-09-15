@@ -1,7 +1,7 @@
 .venv
 __pycache__/
 *.pyc
-results.json
-.mcp.json
-data/
 .pytest_cache/
+
+# A report generated at the repository root; the sample lives in data/.
+/results.json

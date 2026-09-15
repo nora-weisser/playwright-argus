@@ -15,12 +15,10 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 # run-001.json, run-002.json, ... Copied there after a run, or generated.
 DEFAULT_HISTORY_DIR = PROJECT_ROOT / "data" / "history"
 
-# The report of the latest run. Defaulted, like the history directory, so the
-# server answers on every launch path rather than only the configured one: the
-# MCP Inspector spawns servers with a fixed set of environment variables
-# (HOME, LOGNAME, PATH, SHELL, TERM, USER) and drops the rest, so REPORT_PATH
-# cannot reach the process there however it is exported.
-DEFAULT_REPORT_PATH = PROJECT_ROOT / "src" / "playwright_report_mcp" / "results.json"
+# The report of the latest run. Defaulted like the history directory, so the
+# server answers with no configuration: the MCP Inspector spawns servers with a
+# fixed set of environment variables and drops REPORT_PATH along with the rest.
+DEFAULT_REPORT_PATH = PROJECT_ROOT / "data" / "results.json"
 
 
 def resolve_path(path: str) -> Path:

@@ -1,17 +1,21 @@
 [project]
 name = "playwright-report-mcp"
 version = "0.1.0"
-description = "Add your description here"
+description = "An MCP server that lets an LLM agent read, group and track failures in Playwright test reports."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=2.1.1",
-    "pytest>=8.4.2",
-    "pytest-asyncio>=1.2.0",
 ]
 
 [project.scripts]
 playwright-report-mcp = "playwright_report_mcp:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]

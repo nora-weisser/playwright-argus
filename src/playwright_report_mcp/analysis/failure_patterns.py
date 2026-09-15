@@ -1,9 +1,6 @@
 from collections import defaultdict
 from playwright_report_mcp.models.failure import FailureEvidence
 
-# Checked in order, first hit wins, so the more specific patterns come first:
-# "TimeoutError: locator.click: ..." carries both a locator and a timeout, and
-# the locator is the better description of it.
 PATTERNS = {
     "locator-ambiguous": [
         "strict mode violation",
@@ -67,9 +64,6 @@ def analyze_failure_patterns(results: list[FailureEvidence]) -> list[dict]:
     output = []
 
     for pattern, failures in patterns.items():
-        # One entry per affected test rather than per failure, so a test that
-        # failed the same way on two projects reads as one problem on two
-        # browsers instead of two unrelated problems.
         by_test: dict[str, list[FailureEvidence]] = defaultdict(list)
         for failure in failures:
             by_test[failure.test_id].append(failure)
@@ -91,5 +85,7 @@ def analyze_failure_patterns(results: list[FailureEvidence]) -> list[dict]:
                 for test_id, runs in by_test.items()
             ],
         })
+
+    output.sort(key=lambda group: (-group["occurrences"], group["pattern"]))
 
     return output

@@ -444,13 +444,19 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "mcp", extra = ["cli"] },
+]
+
+[package.dev-dependencies]
+dev = [
     { name = "pytest" },
     { name = "pytest-asyncio" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "mcp", extras = ["cli"], specifier = ">=2.1.1" },
+requires-dist = [{ name = "mcp", extras = ["cli"], specifier = ">=2.1.1" }]
+
+[package.metadata.requires-dev]
+dev = [
     { name = "pytest", specifier = ">=8.4.2" },
     { name = "pytest-asyncio", specifier = ">=1.2.0" },
 ]

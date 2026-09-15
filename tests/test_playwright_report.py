@@ -3,7 +3,7 @@ import pytest
 from playwright_report_mcp.analysis.failure_patterns import analyze_failure_patterns
 from playwright_report_mcp.playwright_report import PlaywrightReport, strip_ansi
 
-REPORT_PATH = Path(__file__).parent.parent / "src" / "playwright_report_mcp" / "results.json"
+REPORT_PATH = Path(__file__).parent.parent / "data" / "results.json"
 
 
 def report() -> PlaywrightReport:
@@ -184,3 +184,28 @@ def test_a_run_with_nothing_wrong_reports_no_errors():
     """The bundled sample has real test failures but no run-wide errors."""
 
     assert report().get_summary().errors == []
+
+
+def test_failure_patterns_come_back_biggest_first():
+    """The dominant pattern is what an agent should read first."""
+
+    groups = analyze_failure_patterns(report().get_failure_evidence())
+    counts = [group["occurrences"] for group in groups]
+
+    assert counts == sorted(counts, reverse=True)
+    assert groups[0]["occurrences"] == 3
+
+
+def test_one_test_failing_on_two_projects_is_one_entry():
+    """A single problem on two browsers, not two unrelated problems."""
+
+    groups = analyze_failure_patterns(report().get_failure_evidence())
+    entries = [
+        failure
+        for group in groups
+        for failure in group["failures"]
+        if failure["test_id"] == "cart.spec.ts > TC-R01: persists the cart"
+    ]
+
+    assert len(entries) == 1
+    assert entries[0]["projects"] == ["chromium", "firefox"]

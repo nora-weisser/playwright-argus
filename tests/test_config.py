@@ -21,7 +21,7 @@ def test_absolute_config_paths_are_left_alone():
 def test_the_configured_paths_point_at_real_files(monkeypatch):
     """The defaults shipped in .mcp.json, checked against the repo."""
 
-    monkeypatch.setenv("REPORT_PATH", "src/playwright_report_mcp/results.json")
+    monkeypatch.setenv("REPORT_PATH", "data/results.json")
     monkeypatch.setenv("HISTORY_DIR", "data/history")
 
     assert get_report_path().is_file()

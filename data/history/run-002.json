@@ -1,0 +1,877 @@
+{
+  "config": {
+    "argv": [],
+    "configFile": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/playwright.config.ts",
+    "rootDir": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/specs",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run app:up",
+      "cwd": "..",
+      "url": "http://localhost:3100/api/health",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "create.test.case.demo.spec.ts",
+      "file": "create.test.case.demo.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-S04: a todo can be edited",
+          "ok": true,
+          "tags": [
+            "e2e",
+            "public"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1018,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errors": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "293d229093ee9f9b8d6c-6962a404eee46de2559f",
+          "file": "create.test.case.demo.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "debug-demo.spec.ts",
+      "file": "debug-demo.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "DEBUG_CLI: a todo can be edited",
+          "ok": false,
+          "tags": [
+            "e2e",
+            "public"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30229,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/debug-demo-DEBUG-CLI-a-todo-can-be-edited-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/debug-demo-DEBUG-CLI-a-todo-can-be-edited-chromium/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30069,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/debug-demo-DEBUG-CLI-a-todo-can-be-edited-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/debug-demo-DEBUG-CLI-a-todo-can-be-edited-chromium/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bb7e76743de78e580f00-ede9be8b310b8b7ebc11",
+          "file": "debug-demo.spec.ts",
+          "line": 9,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "debug-strict-mode.spec.ts",
+      "file": "debug-strict-mode.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "DEBUG_TRACE: a todo can be completed",
+          "ok": true,
+          "tags": [
+            "e2e",
+            "public"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1061,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errors": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6596d1277d5b375b541b-cbba29e6ffaba674d07d",
+          "file": "debug-strict-mode.spec.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "smoke.spec.ts",
+      "file": "smoke.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-S01: app shell renders with the empty state",
+          "ok": true,
+          "tags": [
+            "e2e",
+            "public"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1115,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errors": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-76421775e9c408b24e5d",
+          "file": "smoke.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "TC-S02: a todo can be added",
+          "ok": true,
+          "tags": [
+            "e2e",
+            "public"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 726,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errors": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-6647c5b9652dffeb7b8a",
+          "file": "smoke.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "TC-S03: a todo can be removed",
+          "ok": true,
+          "tags": [
+            "e2e",
+            "public"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 896,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errors": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-b4feb43522f657125ea0",
+          "file": "smoke.spec.ts",
+          "line": 27,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "checkout.spec.ts",
+      "file": "checkout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-C01: proceeds to payment",
+          "ok": false,
+          "tags": [
+            "e2e"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 907,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/checkout-c01-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/checkout-c01-chromium/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "Error: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#submit-order')\u001b[22m\n\u001b[2m  - locator resolved to 0 elements\u001b[22m",
+                    "stack": "Error: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#submit-order')\u001b[22m\n\u001b[2m  - locator resolved to 0 elements\u001b[22m"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#submit-order')\u001b[22m\n\u001b[2m  - locator resolved to 0 elements\u001b[22m"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "checkout-c01-id",
+          "file": "checkout.spec.ts",
+          "line": 11,
+          "column": 5
+        },
+        {
+          "title": "TC-C02: shows the order summary",
+          "ok": false,
+          "tags": [
+            "e2e"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5057,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/checkout-c02-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/checkout-c02-chromium/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "Error: strict mode violation: getByRole('listitem') resolved to 3 elements:\n  1) <li>Socks</li>\n  2) <li>Shoes</li>\n  3) <li>Hat</li>",
+                    "stack": "Error: strict mode violation: getByRole('listitem') resolved to 3 elements:\n  1) <li>Socks</li>\n  2) <li>Shoes</li>\n  3) <li>Hat</li>"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: strict mode violation: getByRole('listitem') resolved to 3 elements:\n  1) <li>Socks</li>\n  2) <li>Shoes</li>\n  3) <li>Hat</li>"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "checkout-c02-id",
+          "file": "checkout.spec.ts",
+          "line": 24,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "payment.spec.ts",
+      "file": "payment.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-P01: submits an order",
+          "ok": true,
+          "tags": [
+            "e2e"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 869,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errors": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "payment-p01-id",
+          "file": "payment.spec.ts",
+          "line": 14,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "cart.spec.ts",
+      "file": "cart.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-R01: persists the cart",
+          "ok": false,
+          "tags": [
+            "e2e"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1069,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/cart-r01-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/cart-r01-chromium/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "Error: expect(received).toHaveText(expected)\n\nExpected string: \"3 items\"\nReceived string: \"0 items\"",
+                    "stack": "Error: expect(received).toHaveText(expected)\n\nExpected string: \"3 items\"\nReceived string: \"0 items\""
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: expect(received).toHaveText(expected)\n\nExpected string: \"3 items\"\nReceived string: \"0 items\""
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 895,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errors": []
+                }
+              ],
+              "status": "flaky"
+            },
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5154,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/cart-r01-firefox/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/cart-r01-firefox/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "Error: expect(received).toHaveText(expected)\n\nExpected string: \"3 items\"\nReceived string: \"0 items\"",
+                    "stack": "Error: expect(received).toHaveText(expected)\n\nExpected string: \"3 items\"\nReceived string: \"0 items\""
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: expect(received).toHaveText(expected)\n\nExpected string: \"3 items\"\nReceived string: \"0 items\""
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cart-r01-id",
+          "file": "cart.spec.ts",
+          "line": 18,
+          "column": 5
+        },
+        {
+          "title": "TC-R02: shows the item count",
+          "ok": false,
+          "tags": [
+            "e2e"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3022,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/cart-r02-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/cart-r02-chromium/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "Error: expect(received).toHaveCount(expected)\n\nExpected: 3\nReceived: 0",
+                    "stack": "Error: expect(received).toHaveCount(expected)\n\nExpected: 3\nReceived: 0"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: expect(received).toHaveCount(expected)\n\nExpected: 3\nReceived: 0"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cart-r02-id",
+          "file": "cart.spec.ts",
+          "line": 31,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.ts",
+      "file": "dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-D01: loads widgets",
+          "ok": false,
+          "tags": [
+            "e2e"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30078,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/dashboard-d01-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/dashboard-d01-chromium/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dashboard-d01-id",
+          "file": "dashboard.spec.ts",
+          "line": 9,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "fixtures.spec.ts",
+      "file": "fixtures.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-F01: seeds the database",
+          "ok": false,
+          "tags": [
+            "e2e"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2900,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-28T09:02:11.107Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/fixtures-f01-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/eleonora.belova/Documents/Repositories/ai-assisted-testing-demo/tests/test-results/fixtures-f01-chromium/error-context.md"
+                    }
+                  ],
+                  "error": {
+                    "message": "Error: ENOENT: no such file or directory, open 'fixtures/seed.json'",
+                    "stack": "Error: ENOENT: no such file or directory, open 'fixtures/seed.json'"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: ENOENT: no such file or directory, open 'fixtures/seed.json'"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fixtures-f01-id",
+          "file": "fixtures.spec.ts",
+          "line": 7,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-28T09:02:11.107Z",
+    "duration": 117280.859,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 1
+  }
+}
