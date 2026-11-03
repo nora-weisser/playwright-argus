@@ -1,7 +1,7 @@
 from collections import Counter, defaultdict
 from pathlib import Path
-from playwright_report_mcp.history.loader import load_history
-from playwright_report_mcp.models.history import (
+from playwright_argus.history.loader import load_history
+from playwright_argus.models.history import (
     TestHistory,
     TestRunResult,
     TestStability,

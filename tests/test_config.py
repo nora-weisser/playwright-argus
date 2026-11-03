@@ -1,5 +1,5 @@
 from pathlib import Path
-from playwright_report_mcp.config import (
+from playwright_argus.config import (
     DEFAULT_REPORT_PATH,
     PROJECT_ROOT,
     get_history_dir,

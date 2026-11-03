@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from playwright_report_mcp.models.test_result import TestResult
+from playwright_argus.models.test_result import TestResult
 
 
 class TestRunResult(TestResult):

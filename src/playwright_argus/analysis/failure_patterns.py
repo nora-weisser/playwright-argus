@@ -1,5 +1,5 @@
 from collections import defaultdict
-from playwright_report_mcp.models.failure import FailureEvidence
+from playwright_argus.models.failure import FailureEvidence
 
 PATTERNS = {
     "locator-ambiguous": [

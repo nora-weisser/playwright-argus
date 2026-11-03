@@ -1,9 +1,9 @@
 import json
 import re
 from pathlib import Path
-from playwright_report_mcp.models.failure import FailureEvidence
-from playwright_report_mcp.models.test_result import TestResult, normalize_status
-from playwright_report_mcp.models.test_summary import TestSummary
+from playwright_argus.models.failure import FailureEvidence
+from playwright_argus.models.test_result import TestResult, normalize_status
+from playwright_argus.models.test_summary import TestSummary
 
 ANSI_ESCAPE = re.compile(r"\x1b\[[0-9;]*m")
 
