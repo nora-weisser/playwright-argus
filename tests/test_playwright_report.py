@@ -1,7 +1,7 @@
 from pathlib import Path
 import pytest
-from playwright_report_mcp.analysis.failure_patterns import analyze_failure_patterns
-from playwright_report_mcp.playwright_report import PlaywrightReport, strip_ansi
+from playwright_argus.analysis.failure_patterns import analyze_failure_patterns
+from playwright_argus.playwright_report import PlaywrightReport, strip_ansi
 
 REPORT_PATH = Path(__file__).parent.parent / "data" / "results.json"
 

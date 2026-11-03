@@ -1,15 +1,15 @@
 from mcp.server import MCPServer
-from playwright_report_mcp.analysis.failure_patterns import analyze_failure_patterns
-from playwright_report_mcp.analysis.test_history import (
+from playwright_argus.analysis.failure_patterns import analyze_failure_patterns
+from playwright_argus.analysis.test_history import (
     analyze_test_history,
     rank_unstable_tests,
 )
-from playwright_report_mcp.config import get_history_dir, get_report_path
-from playwright_report_mcp.models.history import TestHistory, TestStability
-from playwright_report_mcp.models.test_summary import TestSummary
-from playwright_report_mcp.playwright_report import PlaywrightReport
+from playwright_argus.config import get_history_dir, get_report_path
+from playwright_argus.models.history import TestHistory, TestStability
+from playwright_argus.models.test_summary import TestSummary
+from playwright_argus.playwright_report import PlaywrightReport
 
-mcp = MCPServer("Playwright Report")
+mcp = MCPServer("Playwright Argus")
 
 @mcp.tool()
 def get_test_summary() -> TestSummary:

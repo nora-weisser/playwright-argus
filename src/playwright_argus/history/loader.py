@@ -1,7 +1,7 @@
 from pathlib import Path
-from playwright_report_mcp.analysis.failure_patterns import classify_failure
-from playwright_report_mcp.models.history import TestRunResult
-from playwright_report_mcp.playwright_report import PlaywrightReport
+from playwright_argus.analysis.failure_patterns import classify_failure
+from playwright_argus.models.history import TestRunResult
+from playwright_argus.playwright_report import PlaywrightReport
 
 RUN_GLOB = "run-*.json"
 

@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "playwright-report": {
+    "playwright-argus": {
       "command": "uv",
-      "args": ["run", "playwright-report-mcp"]
+      "args": ["run", "playwright-argus"]
     }
   }
 }

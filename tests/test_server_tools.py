@@ -1,7 +1,7 @@
 from pathlib import Path
 import pytest
 from mcp import Client
-from playwright_report_mcp.server import mcp
+from playwright_argus.server import mcp
 
 HISTORY_DIR = Path(__file__).parent / "fixtures" / "history"
 CHECKOUT = "checkout.spec.ts > TC-C01: proceeds to payment"

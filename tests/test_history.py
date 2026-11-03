@@ -1,11 +1,11 @@
 import json
 from pathlib import Path
 import pytest
-from playwright_report_mcp.analysis.test_history import (
+from playwright_argus.analysis.test_history import (
     analyze_test_history,
     rank_unstable_tests,
 )
-from playwright_report_mcp.history.loader import load_history
+from playwright_argus.history.loader import load_history
 
 HISTORY_DIR = Path(__file__).parent / "fixtures" / "history"
 

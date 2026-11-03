@@ -1,4 +1,4 @@
-# Playwright Report MCP
+# Playwright Argus
 
 An MCP server that lets an LLM agent read Playwright test reports. A Playwright
 JSON report is tens of thousands of lines and mostly noise; these tools answer
@@ -63,8 +63,8 @@ register it globally instead, pass `--directory` so `uv` finds this project's
 venv from anywhere:
 
 ```bash
-claude mcp add playwright-report -s user -- \
-  uv --directory /absolute/path/to/playwright-test-analysis-mcp run playwright-report-mcp
+claude mcp add playwright-argus -s user -- \
+  uv --directory /absolute/path/to/playwright-argus run playwright-argus
 ```
 
 ### With Claude Desktop
@@ -75,22 +75,22 @@ macOS), then quit with Cmd-Q and reopen:
 ```json
 {
   "mcpServers": {
-    "playwright-report": {
+    "playwright-argus": {
       "command": "uv",
-      "args": ["--directory", "/absolute/path/to/playwright-test-analysis-mcp",
-               "run", "playwright-report-mcp"]
+      "args": ["--directory", "/absolute/path/to/playwright-argus",
+               "run", "playwright-argus"]
     }
   }
 }
 ```
 
-Logs land in `~/Library/Logs/Claude/mcp-server-playwright-report.log`.
+Logs land in `~/Library/Logs/Claude/mcp-server-playwright-argus.log`.
 
 ### By hand
 
 ```bash
-uv run mcp dev src/playwright_report_mcp/server.py   # Inspector, in a browser
-uv run playwright-report-mcp                         # plain stdio server
+uv run mcp dev src/playwright_argus/server.py   # Inspector, in a browser
+uv run playwright-argus                         # plain stdio server
 ```
 
 ## Point it at your own project
@@ -118,7 +118,7 @@ Where you set the two variables depends on how the server was started:
 | Launched by | Configuration comes from |
 |---|---|
 | Claude Code / Desktop | the `env` block in the client's JSON config |
-| Your shell (`mcp run`, `playwright-report-mcp`) | exported variables |
+| Your shell (`mcp run`, `playwright-argus`) | exported variables |
 | MCP Inspector (`mcp dev`) | the Inspector's own Environment Variables fields |
 
 The Inspector is the odd one out: it spawns servers with a fixed set of
@@ -147,7 +147,7 @@ their runs in a `tmp_path` instead.
 ## How the code is laid out
 
 ```
-src/playwright_report_mcp/
+src/playwright_argus/
   server.py              the five MCP tools, and nothing else
   config.py              where REPORT_PATH and HISTORY_DIR resolve to
   playwright_report.py   the one place that knows Playwright's JSON shape
@@ -169,7 +169,7 @@ and the latest-run tools cannot disagree about what a test is.
 | Tools answer about the wrong tests | `REPORT_PATH` is unset, so the server is reading the bundled sample |
 | `No Playwright report at ...` | The path in the message is what `REPORT_PATH` resolved to; relative paths come from the repository root |
 | `... is not a Playwright JSON report` | Not `json`-reporter output — an HTML report, or a blob |
-| `ModuleNotFoundError: playwright_report_mcp` | A client ran `uv` without `--directory` from outside the repository |
+| `ModuleNotFoundError: playwright_argus` | A client ran `uv` without `--directory` from outside the repository |
 | Server missing from `/mcp` | Servers load at startup: restart the session, and approve the project-scoped server |
 | `mcp dev` will not start | Node.js is missing, so there is no `npx`; use `mcp run` instead |
 

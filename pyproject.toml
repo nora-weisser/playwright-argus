@@ -1,5 +1,5 @@
 [project]
-name = "playwright-report-mcp"
+name = "playwright-argus"
 version = "0.1.0"
 description = "An MCP server that lets an LLM agent read, group and track failures in Playwright test reports."
 readme = "README.md"
@@ -25,11 +25,12 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/nora-weisser/playwright-test-analysis-mcp"
-Issues = "https://github.com/nora-weisser/playwright-test-analysis-mcp/issues"
+Repository = "https://github.com/nora-weisser/playwright-argus"
+Issues = "https://github.com/nora-weisser/playwright-argus/issues"
 
 [project.scripts]
-playwright-report-mcp = "playwright_report_mcp:main"
+playwright-argus = "playwright_argus:main"
+pw-argus = "playwright_argus:main"
 
 [dependency-groups]
 dev = [
