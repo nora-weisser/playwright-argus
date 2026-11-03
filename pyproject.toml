@@ -3,10 +3,30 @@ name = "playwright-report-mcp"
 version = "0.1.0"
 description = "An MCP server that lets an LLM agent read, group and track failures in Playwright test reports."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "nora-weisser" }]
+keywords = ["mcp", "playwright", "test-analysis", "testing", "flaky-tests", "ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+]
 requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=2.1.1",
 ]
+
+[project.urls]
+Repository = "https://github.com/nora-weisser/playwright-test-analysis-mcp"
+Issues = "https://github.com/nora-weisser/playwright-test-analysis-mcp/issues"
 
 [project.scripts]
 playwright-report-mcp = "playwright_report_mcp:main"

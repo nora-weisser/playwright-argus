@@ -176,3 +176,7 @@ and the latest-run tools cannot disagree about what a test is.
 Avoid `uv run mcp install …`: it registers the server with `--with mcp[cli]` in
 an isolated environment and no `--directory`, so this package is never
 importable.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
